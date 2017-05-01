@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* SIgotghome.css */
+
+#sects {
+	margin-left: 250px;
+}
+
+#borderpic {
+	border: solid #FF5566;
+	border-style: 8px;
+	height: 100px;
+	width: 100px;
+	vertical-align: text-top;
+	float: left;
+}
+
+
+#mainbio {
+	margin-top: 130px;
+	width: 820px;
+	height: auto;
+	padding: 34px;
+	background-color: black;
+}
+
+h3 {
+	color: white;
+}
+
+#mainbio p {
+	padding-bottom: 24px;
+	min-height: 100px;
+}
+
+header {
+	position: relative;
+	background-image: url("http://csit.parkland.edu/~bdudley3/SI/SIimages/GotG1.jpg");
+	background-repeat: no-repeat;
+	width: 90%;
+	height: 300px;
+	box-shadow: #04142d;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+header h1 {
+	position: absolute; padding: 70px 0px 0px 20px; text-shadow: 0px 0px 10px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
