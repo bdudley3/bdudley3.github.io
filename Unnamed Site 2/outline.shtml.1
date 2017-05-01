@@ -1,0 +1,1866 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+<title>CSC128: Class Outline Fall 16
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<meta name="Author" content="sean mauney , smauney"/>
+<link rel="icon" href="128.ico" type="image/favicon"/>
+<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+<meta name="description" content="Course Pages for CSC128, Sean Mauney, 
+	Parkland College, Champaign, Illinois, e-mail smauney at parkland.edu"/>
+<meta name="keywords" content="Parkland College, CSC, CSIT, CSC130, CSC128,
+	CSC250, Mauney, Chon "/> 
+
+</head>
+
+<body>
+<div id="container">
+<h3 align="right">
+Linux User Concepts - Parkland &nbsp; &nbsp;
+</h3>
+<div class="col1link">
+<ul>
+   <li><a href="outline.shtml">Outline</a></li>
+   <li><a href="syllabus.shtml">Syllabus</a></li>
+   <li><a href="../office_hours.html">Office Hours</a></li>
+   <li><a href="videos">Browse Videos</a></li>
+   <li><a href="media">Old Videos</a></li>
+   <li><a href="scripts/">Example Scripts</a></li>
+  <!-- <li><a href="../search/search.shtml">Site Search</a></li>
+   <li> <form method="post" action="../search/csc128search.pl">
+		Search CSC128: 
+		<input type="text" name="terms" size="12"/><br/>
+		<input type="submit" value="Search"/> 
+		<input type="hidden" name="boolean" value="AND"/>
+		<input type="hidden" name="case" value="Insensitive"/>
+	</form>
+	</li>
+	-->
+</ul>
+</div>
+
+<div class="col1lowerlink">
+<b>Linux<br />Resources:</b>
+	   <ul>
+<li><a href="http://www.csit.parkland.edu/~smauney/csc128/scripts">Example Scripts</a>  </li>
+ <li>
+  <a href="http://www.tldp.org/LDP/intro-linux/html/">
+   hands on Guide </a>
+           </li>
+<li><a href="http://www.linfo.org/index.html">Linux Info. Project</a>  </li>
+<li><a href="http://en.tldp.org/">Linux Doc. Project</a>  </li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_Unix_programs" target="_blank">List of Unix Utils</a>  </li>
+<!--
+<li><a href="http://en.tldp.org/HOWTO/HOWTO-INDEX/index.html">LDP HOWTO's</a>  </li> -->
+<li><a href="http://www.gnu.org/software/bash/manual/bashref.html"
+target="_blank">GNU bash manual</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29"
+target="_blank">Wikipedia bash shell</a></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="date">Last Modified:
+	<br/> Friday, 04-Nov-2016 09:17:17 CDT </div>
+
+<div class="col2">
+<h1>CSC128: Outline Fall 16
+
+
+<br/>
+</h1>
+
+<a name="Top"> </a>
+<hr/>
+<span class="biggreen">Module 1 - Basic Utilities and the Linux Filesystem</span>
+<br /><br />
+<table width="75%"  bgcolor="#ffffdd" border="2" cellpadding="9" cellspacing="2">
+<tr>
+	<td><a href="#week1">Week  1</a>
+	<small>- Aug. 22
+</small><br/>
+	</td>
+	
+	<td> 
+		<a href="#week2">Week 2</a> - 
+		<small>Aug. 29
+</small><br />
+	</td>
+	
+	<td>
+		<a href="#week3">Week 3</a> -
+		<small>Sept. 6 <br>Sept. 5 - Labor Day
+</small>
+	</td>
+		
+	<td>	
+		<a href="#week4">Week 4</a>  - 
+		<small>Sept. 12
+</small>
+	</td>
+</tr>
+</table>
+<br />
+<span class="biggreen">Module 2 - Editing Files using the vi editor</span>
+<br /><br />
+<table width="75%"  bgcolor="#ffffdd" border="2" cellpadding="9" cellspacing="2">
+<tr>
+	<td><a href="#week5">Week 5</a> -
+	<small>Sept. 19
+</small>
+	</td>
+	<td> <a href="#week6">Week 6</a> -
+	<small>Sept. 26
+</small>
+	</td>
+</tr>
+</table>
+<br />
+<span class="biggreen">Module 3 - Understanding the Bourne Again Shell and shell scripting</span>
+<br /><br />
+<table width="75%"  bgcolor="#ffffdd" border="2" cellpadding="9" cellspacing="2">
+	<tr>	
+	<td><a href="#week7">Week 7</a> -
+	<small>Oct. 3
+</small>
+	</td>
+	<td><a href="#week8">Week 8</a> -
+	<small>Oct. 10
+</small>
+	</td>
+</tr>
+
+<tr>
+<td><b> <a href="#week9">Week 9</a> </b> -
+	<small>Oct. 17
+</small>
+	</td>
+<td><b> <a href="#week10">Week 10</a> </b> -
+	<small>Oct. 24
+ </small>
+	</td>
+</tr>
+</table>
+<br />
+<span class="biggreen">Module 4 - Regular Expressions and stream editing</span>
+<br /><br />
+<table width="75%"  bgcolor="#ffffdd" border="2" cellpadding="9" cellspacing="2">
+<tr>
+<td><b> <a href="#week11">Week 11</a> </b>  -
+	<small>Oct. 31
+</small>
+	</td>
+<td><b> <a href="#week12">Week 12</a> </b> -
+	<small>Nov. 7
+</small>
+	</td>
+</tr>
+
+</table>
+<br />
+<span class="biggreen">Module 5 - Web Programming, scheduling jobs, manipulating groups 
+	</span>
+<br /><br />
+<table width="75%"  bgcolor="#ffffdd" border="2" cellpadding="9" cellspacing="2">
+<tr>
+<td><b> <a href="#week13">Week 13</a> </b> -
+	<small>Nov. 14
+</small>
+	</td>
+<td><b> <a href="#week14">Week 14</a> </b> -
+	<small>Nov. 21-22 <br />Thanksgiving Break Nov. 23-7
+</small>
+	</td>
+<td><b> <a href="#week15">Week 15</a> </b>  -
+	<small>Nov. 28
+</small>
+	</td>
+<td><b> <a href="#week16">Week 16</a> </b> -
+	<small>Dec. 5
+</small>
+	</td>
+</tr>
+
+
+
+
+
+
+
+</table>
+
+<div style="padding:0;">
+	<!--<div>-->
+
+
+
+
+
+</div>
+<!--********************************WEEK 1********************-->
+<a name="week1"></a>
+<h3>Week 1:
+<span class="small">Aug. 22
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<b>Introduction to Linux, Logging in  and Basic Shell Commands</b><br />
+<br />
+
+<ul>
+	<li>
+ <a href="introduction2.html"> Your First Linux login</a>
+	</li>
+	
+	<li>
+ <a href="login_remotely.html">Connecting Remotely and Transferring Files
+to the server.</a> 
+	</li>
+	
+	<li>
+	<a href="basic_commands.html">Basic Commands</a>
+	</li>
+	
+	
+	
+	
+	<li>
+ <a href="day2.txt">Commands we are using</a>
+	</li>
+	<li>
+ <a href="commands.txt">Basic Commands to Practice</a>
+	</li>
+	
+	<li>
+ 	Ch 1  -  Intro. Just skim this if you wish.
+	</li>
+	
+	<li>
+	Ch2 -  Getting Started  and documentation
+	</li>
+</ul>
+
+
+
+
+<object><hr/></object>
+<span class="firstletter">P</span>ractice Basic Commands:<br/> 
+<br />
+<b>These wikipedia pages all have a good listing near the bottom of the main basic utilities
+	that you will need to learn for this course.</b>
+	<ul>
+		<li><a href="http://en.wikipedia.org/wiki/Info_(Unix)" target="_blank"><tt>info</tt></a> </li> 
+		<li><a href="http://en.wikipedia.org/wiki/Ls" target="_blank"><tt>ls</tt></a> </li> 
+		<li><a href="http://en.wikipedia.org/wiki/Pwd" target="_blank"><tt>pwd</tt></a></li> 
+		<li><a href="http://en.wikipedia.org/wiki/Man_page" target="_blank"><tt>man</tt></a></li> 
+		<li><a href="http://en.wikipedia.org/wiki/Info_(Unix)" target="_blank"><tt>info</tt></a></li> 
+		<li>All of these Wikipedia pages have complete lists of
+		utilities on the bottom so check them for yourself as
+		needed.</li>
+</ul>
+
+
+
+
+<object><hr/></object>
+<span class="firstletter">V</span>ideo:<br/> 
+
+	<ul>
+		<li> 
+ <a href="videos/1a_practice/" target="_blank"> How to start learning: Practice Don't Study</a>
+	</li>
+		<li> 
+ <a href="media/firstlogin/firstlogin.htm"> First Login Using Putty</a>
+	</li>
+		<li> 
+ <a href="media/initial_navigation/initial_navigation.htm"> Initial Navigation of the
+	 Linux Filesystem</a>
+	</li>
+		<li> 
+ <a href="media/help/help.htm"> Getting Help from the system
+	 </a>
+	</li>
+		<li> 
+ <a href="media/ls_cp_tail_wc/ls_cp_tail_wc.htm"> ls, cp, tail, wc and what is
+	 the .bash_history file
+	 </a> (that is called the "dot bash underscore history" file)
+	</li>
+		<li> 
+ <a href="media/cat_less_wc/cat_less_wc.htm"> cat less and wc 
+	 </a>
+	</li>
+		<li> 
+ <a href="media/rm_alias_file/rm_alias_file.htm"> rm alias and file 
+	 </a>
+	</li>
+		<li> 
+ <a href="media/cp_chmod/cp_chmod.htm"> cp and basic chmod 
+	 </a>
+	</li>
+</ul>
+<object><hr/></object>
+
+<span class="firstletter">L</span>abs:<br/> 
+
+<ul>
+	<li><b>Lab 1:</b>
+<a href="labs/1a_lab1/" target="_blank"> Lab1 Video</a> 
+	
+	<br />
+       	Look at the web pages in the schedule above and Login to shaula.csit.parkland.edu and change your password
+. I will be checking the system logs to see if you have
+changed your password by the due date. <br/>
+<b>All Due dates are in the Calendar section in the upper right of the main Course
+	page in Cobra.</b>
+</li>
+<!--
+<li><b>Lab 2:</b>  
+ <a href="labs/1b_lab2/" target="_blank"> Lab2 Video</a> 
+<br />
+
+Follow along  in the shell while you are taking the Exercises and then login remotely from home and practice in the shell
+and then copy your <tt>~/.bash_history</tt> to a file called <tt>~/bin/lab2.txt</tt> and I will
+correct it. There should be 500 commands in your history. I will explain this 
+in a video and demonstrate it. 15 points. You will need to run the command
+<tt>chmod 644 ~/bin/lab2.txt </tt> so that I can see it. I will be checking that
+you logged in remotely and will be checking for the copied history file.
+<br />
+</li>
+-->
+<li><b>Lab 2:</b> Classlab - Follow along in class and you will get 10 points.  </li>
+
+
+<li>
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 1</a> Chapter 2 -
+Getting Started. 
+</li>
+<li>
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 2</a> Chapter 3 -
+The Utilities. 
+</li>
+
+</ul>
+</blockquote>
+
+
+<!-- *********************WEEK 2******************** -->
+<a name="week2"></a>
+<h3>Week 2:
+<span class="small">Aug. 29
+</span>
+</h3>
+
+
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+
+<br />
+
+<b>Basic utilities and the Linux Filesystem - Chapters 3 and 4</b>
+
+<ul>
+
+<li>
+<a href="commands.txt">Commands to Practice</a>
+</li>
+<li>
+<a href="http://en.wikipedia.org/wiki/GNU_Core_Utilities" target="_blank">GNU Core Utilities</a>
+</li>
+<li>
+Chapter 3 - skip gzip, tar, sort, uniq. <br />
+you should know that we use <tt>ytalk</tt> not <tt>talk</tt>
+</li>
+
+<li>Read Chapter 4
+</li>
+<li>Skip pp. 104-8  access control lists ACL's
+</li>
+<li>Chapter 4 p. 96 - standard linux directories
+</li>
+<li>Chapter 4 p. 109   - links and symbolic links
+</li>
+
+<li>Read p. 741-745 <tt>chmod</tt> -<br />
+Special note on <small> <tt>chmod</tt><br />
+We
+<b>do not</b> use the extra number in the permission<br />
+setting scheme as shown on p. 742 table VI-7, so we will<br />
+not be using <tt>chmod 4xxx</tt> or<tt> chmod 0755</tt> etc.<br />
+Instead we just use
+<tt>chmod 755</tt> etc. 
+<br />See my "Permissions and Links" page below.
+</small></li>
+
+<li>
+	<a href="file_system.html">File System</a><br/>
+</li>
+
+
+<li><a href="http://www.tldp.org/LDP/intro-linux/html/chap_03.html">Linux File
+System at the LDP</a>
+</li>
+
+<li>
+<a href="http://www.gnu.org/copyleft/gpl.html">GNU Pub License</a>
+</li>
+<li>
+<a href="permissions_and_links.html">Permissions and Links</a>
+</li>
+
+</ul>
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+<ul>
+	<li><a href="http://www.csit.parkland.edu/~smauney/csc128/videos/faq/dot_dotdot/" target="_blank"> What are dot and dotdot?</a>     </li>
+
+
+</ul>
+
+
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<ul>
+	<li><b>Lab 3</b> - In class lab. Follow along for 10 points.
+	 </li>
+
+	<li>
+	<a href="http://cobra.parkland.edu" target="_blank">Exercise 3</a> Ch. 4 - <b>Linux Filesystem.</b> </li>
+
+<li>
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 4</a> Ch. 4 - <b>
+	Filesystem Advanced. </b> </li>
+</ul>
+
+
+
+
+
+
+
+<!-- *********************WEEK 3******************** -->
+<a name="week3"></a>
+<h3>Week 3:
+<span class="small">Sept. 6 <br>Sept. 5 - Labor Day
+</span>
+</h3>
+
+
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<br /><b>Exam 1</b> Will be Week 4 Day 2 for both classes.
+<br />
+<br />
+<b>Linux Filesystem Continued and Linux Filesystem  Advanced</b>
+<br />
+<br />
+<ul>
+<li>Review the Utility Summaries for Ch. 3 and 4 Especially:</li>
+<li>cp [source-file] [dest-file]   </li>
+<li>diff [file1] [file2]   </li>
+<li>file [file-to-find-out-what-it-is]   </li>
+<li>grep [search-string] [file]   </li>
+<li>head [file-to-look-at-the-top-of]   </li>
+<li>tail [file-to-look-at-the-bottom-of]   </li>
+<li>mv [file-to-move] [destination-to-move-it-to]   </li>
+<li>apropos [keyword]   </li>
+<li>whereis [binary-file-name]   </li>
+<li>which [search-environment-for-which-utility-runs-when-you-call-it]   </li>
+<li>finger [username-to-find-information]   </li>
+<li>w [who-is-logged-on]   </li>
+<li>who [who-is-logged-on]   </li>
+<li>mesg n (turn off messages)   </li>
+<li>mesg y (turn on messages)   </li>
+<li>ytalk [talk-to-user-after-you-fingered-them]   </li>
+<li>date   </li>
+<li>echo    </li>
+</ul>
+
+<ul>
+<li>Chapter 4 </li>
+<li><a href="permissions_and_links.html"> Permissions and Links</a> </li>
+<li><a href="permissions_and_links.html#links"> Symbolic -vs- Hard Links:</a><small> Be sure 
+to study about the links and be sure you know the difference between a
+symbolic and a hard link.</small></li>
+<li><a href="practice.txt"> Practice Help</a> </li>
+<li>The <tt>ln</tt> utility pp. 856-857</li>
+<li>Skip pp. 104-8  access control lists ACL's </li>
+<li>The -i switch with the <tt>ls -il</tt> command </li>
+<li>Here are the commands (and their important switches) that I used for <a
+	href="lab_commands.txt">a lab </a>in
+class. The onlline students should take a look at it.</li>
+</ul>
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+
+	<ul>
+		<li> 
+ <a href="media/rm_rmdir/rm_rmdir.htm"> mv and rm -rf and rmdir</a>
+ </li>
+		<li> 
+ <a href="media/redirection/redirection.htm"> Using Redirection to create a file</a>
+ </li>
+		<li> 
+ <a href="media/symbolic_link/symbolic_link.htm"> Symbolic -vs- Hard Links</a>
+ </li>
+ </ul>
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<ul>
+	<li><b><a href="lab_commands.txt">Commands Lab</a> - Ch 3 and 4 commands </b>
+and placing a file<br /> </li>
+	<li> <b> 
+		<a href="lab_permissions.txt" target="_blank"> Permissions Lab</a></b> (Not in
+D2L, click this link)
+<br />
+</li>	
+</ul>
+
+<br />
+<br />
+<object><hr/></object>
+<span class="firstletter">F</span>or Next Week:<br/> 
+<blockquote>
+
+
+
+
+<br/>
+<br/>
+<br />
+
+
+
+</blockquote>
+
+	  
+	  
+	  
+
+
+<!-- *********************WEEK 4******************** -->
+
+<a name="week4"></a>
+<h3>Week 4:
+<span class="small">Sept. 12
+</span>
+</h3>
+
+
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<blockquote>
+	<ul>
+		<li>Review utilities through Ch 4 and propare for Exam1</li>
+		<li><b>Exam I</b> Ch 1-4 second day of the week.
+		</li>
+		<li>Continue studying the old Exercises while you practice in 
+		the shell  </li>
+		<li>Be sure that you browse around the videos   </li>
+	</ul>
+
+</blockquote>
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+
+<blockquote>
+<ul>
+		<li> New Video: 
+		<a href="videos/chmod_numbers/" target="_blank"> The Numbers with <tt>chmod</tt> </a>
+ </li>
+		<li> New Video: 
+		<a href="videos/chmod_inodes/" target="_blank"> The Inodes and chmod and understanding directories</a>
+ </li>
+		<li> 
+ <a href="media/redirection/redirection.htm"> Using Redirection to create a file</a>
+ </li>
+</ul>
+
+</blockquote>
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<blockquote>
+	<ul>
+<!--
+<li><b>Lab 6 </b> -	Linux Filesystem Advanced
+<br />In cobra.parkland.edu  Read and Understand Ch 4 and review the Exercises  and then you can take
+this lab 3 times and your highest score will stick.<br />
+Due by The end of class. 
+</li>
+-->
+	</ul>
+</blockquote>
+
+
+
+<object><hr/></object>
+<span class="firstletter">F</span>or next Week:<br/> 
+<blockquote>
+
+	<b>Exam 1: Ch 1-4 </b> In Cobra Learning; 50 Questions 100 points 2
+	hours. 
+</blockquote>
+
+
+
+
+<!--************************WEEK 5**************************-->
+<a name="week5"></a>
+<h3>Week 5:
+<span class="small">Sept. 19
+</span>
+</h3>
+
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+
+
+<blockquote>
+
+
+</blockquote>
+
+
+
+<br />
+
+
+	<br /><br />	<b>Introduction to vi (pronounced vee-eye)</b>
+<ul>
+
+	<li>Ch 6 - vi(m) That is vi Improved </li>
+	<li> <a href="vi.html">Text Editor: vi</a><br/> </li>
+	<li> <a href="dos2unix.txt">Converting DOS and Unix Files:</a> </li>
+	<li> <a href="cut_paste.html">Cutting and pasting in vi &amp; X and MS
+	Windows</a>
+	</li>
+	<li><tt>.vimrc</tt> is the file that configures 
+	your editor sessions. Older
+	versions of vi may use <tt>.exrc</tt>
+	</li>
+	<li>Run<b> vimtutor</b> as a good tutorial on vi</li>	
+	<li> <a href="vi.html">Text Editor: vi</a><br/>
+	</li>
+	<li> <a href="http://www.gentoo.org/doc/en/vi-guide.xml">The Gentoo vi cheatsheet</a>. I would like to thank a student for the link.<br/>
+	</li>
+	<li> <a href="viref.html">vi reference sheet</a><br/>
+	</li>
+</ul>
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+	<ul>
+		<li> <a href="media/basic_vi/basic_vi.htm"> basic vi</a> </li>
+		<li> <a href="media/swap1/swap1.htm"> swap files in vi</a> </li> 
+ 	</ul>
+
+
+
+
+
+
+
+
+
+<br />
+<object><hr /></object>
+<br />
+
+
+<span class="firstletter">L</span>abs:<br/>
+
+<blockquote>
+	<ul> 
+		<li>Lab - In class practice vi and Ex5 and vimtutor and I will take roll
+		for 10 points</li>
+	<li><b><a href="vimtutor.txt" target="_blank">Lab </a> - Practicing vi and vimtutor </b>
+	and placing a file in your ~/bin.<br /> </li>
+	<!--
+		<li><b>Lab 9:</b> In class vi lab 1. <br /> Follow along 
+		for the very first vi lab for 10 points. </li>
+		-->
+</ul>
+
+</blockquote>
+<br />
+
+
+<object><hr/></object>
+<span class="firstletter">F</span>or next Week:<br/> 
+<blockquote>
+
+
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 5 - vi </a>  
+<br/>
+<br />
+	<br />
+</blockquote>
+
+
+<!--************************WEEK 6**************************-->
+<a name="week6"></a>
+<h3>Week 6:
+<span class="small">Sept. 26
+</span>
+</h3>
+
+<span class="firstletter"> </span> 
+
+<br />
+	<br /><br />	<b>vi Continued </b>
+<ul>
+
+	<li>Ch 6 - vi(m) That is vi Improved </li>
+	<li> <a href="vi.html">Text Editor: vi</a><br/> </li>
+	<li> <a href="dos2unix.txt">Converting DOS and Unix Files:</a> </li>
+	<li> <a href="cut_paste.html">Cutting and pasting in vi &amp; X and MS
+	Windows</a>
+	</li>
+	<li><tt>.vimrc</tt> is the file that configures 
+	your editor sessions. Older
+	versions of vi may use <tt>.exrc</tt>
+	</li>
+	<li><tt>.viminfo</tt> is a file that holds a copy of your vi LastLine commands.</li>	
+	<li>Run<b> vimtutor</b> as a good tutorial on vi</li>	
+	<li> <a href="vi.html">Text Editor: vi</a><br/>
+	</li>
+	<li> <a href="viref.html">vi reference sheet</a><br/>
+	</li>
+</ul>
+
+	<b>The shell and Redirection Ch 5</b>
+<ul>
+<li>Read Ch 5, The shell and redirection</li>
+	<li><a href="io_redirection.html"> I/O Redirection</a> </li>
+	<li><a href="redirection2.txt">Some examples of  I/O Redirection</a>
+	from my history </li>
+	<li><tt>mail -s "subject here" [yournetid]@shaula.csit.parkland.edu
+		&lt;redirected_filename </tt><br /> This  will redirect stdin in the mail
+	utility from a file instead of the keyboard. Test this because
+	redirecting stdin is important. Also note that in the mail utility that
+	a . on it's own line or CTRL-D sends the end of file character.</li>
+	<li><tt>/dev/null</tt> also called the bitbucket p. 141 </li>
+	<li>Redirection symbols &lt;  &nbsp; &gt; &nbsp; &gt; &gt; &nbsp; | &nbsp; 2> </li>
+	<li>Filters like <tt>sort</tt> </li>
+	<li>tee </li>
+	<li>Managing foreground and background processes and jobs </li>
+	<li><a href="process_management.html">Process Mgmt.</a> </li>
+	<li>Filename expansion (Globbing)  the ? and * at the command line  </li>
+	<li>Character class definitions at the command line [ ] </li>
+	<li>Shell builtins and the <tt>type</tt> utility   </li>
+	<li>your PATH environment variable.   </li>
+	<li>Foreground and Background Processes and the <tt>kill</tt> command.   </li>
+	<li>Running a program in the background <tt>utilityname &amp;</tt>   </li>
+ </ul>
+
+
+<br />
+
+
+
+
+
+
+
+
+
+
+<object><hr/></object>
+<span class="firstletter">V</span>ideo:<br/> 
+	<ul>
+		<li> <a href="media/basic_vi/basic_vi.htm"> basic vi</a> </li>
+		<li> <a href="media/swap1/swap1.htm"> swap files in vi</a> </li> 
+	</ul>
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+
+
+
+
+
+<ul>
+	<li> <a href="lab_vi.txt" target="_blank">
+	Vi edit file lab</a>Due in Class. </li>
+
+</ul>
+
+
+
+
+<br />
+<br />
+
+
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<blockquote>
+
+	<br/>
+
+<br/>
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 6</a> - Chapter 5 and 8: the Shell and Redirection<br/>
+	<small>You may take this Exercise as many times as you wish before<br />
+		<b>the due date posted in Cobra Learning .</b>
+	</small>
+	<br />
+	<br />
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 7</a> - Ch 8: the BASH Shell Part I<br/>
+	<small>You may take this Exercise as many times as you wish before<br />
+		<b>the due date posted in Cobra Learning .</b>
+	</small>
+
+</blockquote>
+
+
+<!--************************WEEK 7**************************-->
+<a name="week7"></a>
+<h3>Week 7:
+<span class="small">Oct. 3
+</span>
+</h3>
+
+<span class="firstletter"> </span> 
+
+
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<br />
+<br />
+
+	<b>The shell and Redirection Ch 5</b>
+<ul>
+	<li>Filename expansion (Globbing)  the ? and * at the command line  </li>
+	<li>Character class definitions at the command line [ ] </li>
+	<li>Shell builtins and the <tt>type</tt> utility   </li>
+	<li>your PATH environment variable.   </li>
+	<li>Foreground and Background Processes and the <tt>kill</tt> command.   </li>
+	<li>Running a program in the background <tt>utilityname &amp;</tt>   </li>
+ </ul>
+
+
+
+
+
+
+<br />
+<b>The Bourne Again Shell Ch 8</b> 
+<ul>
+	<li>Read Ch 8 Process Management, startup files, 
+		keyword variables
+		</li>
+		<li>combining stdout and stderr 2>&amp;1 p. 275-277 (or 282 in
+		the newest book)</li>
+		<li><b>Example:</b><tt>cat file1 nonexistentfile >file2
+			2>&amp;1</tt> </li>
+	<li>Practice the shortcut way of moving around using:<tt>dirs pushd
+	popd</tt> Just a little practice with these will make it obvious
+	how it works. The book is good on the subject too.
+	</li>
+	<li>startup files, paramerters and variables and the
+	read builtin, dot command </li>
+	<li>Positional Parameters, exit status, alias, single -vs- double quotes,
+	shift builtin, </li>
+	<li>Logical operators <tt>&amp;&amp; and || </tt> (man bash and
+	search for these) </li>
+	<li><a href="variables_and_arguments.html">Variables and Arguments</a></li>
+	<li><a href="scripts/">Example Scripts</a></li>
+</ul>
+	<b>Startup Files</b> Book p.278
+
+	<li><b>Login Shells</b>
+		<ol>
+			<li>	<tt>/etc/profile</tt> Often now in multiple
+			files if they are executable and have a .sh extension in <tt>/etc/profile.d</tt> </li>
+			<li>First Priority: <tt>~/.bash_profile</tt> Second
+			Priority <tt>~/.bash_login</tt> and Lastly
+			<tt>~/.profile</tt></li>
+		</ol>
+		<li><b>Interactive Non-Login Shells</b> <tt>~/.bashrc</tt></li>
+
+	</li>
+</ul>
+
+</blockquote>
+<object><hr/></object>
+<span class="firstletter">V</span>ideo:<br/> 
+<ul>
+<li><a href="media/redirection/redirection.htm">Redirection</a> </li>
+<li><a href="media/job_control/job_control.htm">Job Control and Processes</a> </li>
+<li><a href="media/redir_stdin/redir_stdin.htm">Redirecting stdin</a> </li>
+</ul>
+
+
+
+
+
+
+
+	
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+
+<ul>
+	<li><b>Lab first shell scripts:</b> We will be making shell scripts in class and
+	saving them in out ~/bin . These will be demonstrating the shell
+	concepts from Ch 5 and 8. You will keep them and use them for a study
+	guide.</li>
+	<!--
+	<li><b>Lab :</b> In class. Follow along in class and take the exercises
+	and I will take roll for a 10 pointer.
+	</li>
+	<li><b>Lab :</b> 	<a href="lab_redirection.txt" target="_blank">Redirection Lab</a>due before class the first day of next week.<br />
+	</li> 
+	-->
+</ul>
+
+
+
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<blockquote>
+
+
+	<br />
+	<a href="http://cobra.parkland.edu" target="_blank">Exercise 8</a> - Ch 8: the 
+	BASH Shell Part II<br/>
+	<small>You may take this Exercise as many times as you wish before<br />
+		<b>the due date posted in Cobra Learning .</b>
+	</small>
+
+
+
+
+</blockquote>
+<!--************************WEEK 8**************************-->
+<a name="week8"></a>
+<h3>Week 8:
+	<span class="small">Oct. 10
+</span>
+	</h3>
+
+	<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+	<blockquote>
+
+
+
+
+	<object><hr/></object>
+	<br />
+	<b>Exam 2 - Will cover Ch 6 vi, Ch 5 The Shell and Ch. 8 BASH </b>
+	<br />It will be in week 9 on Day 1.
+	<br />
+	<br />
+	Day 1 - finish Ch5 and 8
+	<br />
+	<br />
+
+
+
+
+<b>Introduction to Shell Scripting Ch 10</b>
+	<ul>
+	<li><a href="variables_and_arguments.html">Variables and Arguments</a></li>
+		<li>test </li>
+	<li><a href="scripts/">Example Scripts</a></li>
+
+	</ul>	
+
+
+</blockquote>
+	
+	
+	
+
+<object><hr/></object>
+<span class="firstletter">V</span>ideo:<br/> 
+	
+	
+<ul>
+<li><a href="media/redirection/redirection.htm">Redirection</a> </li>
+<li><a href="media/job_control/job_control.htm">Job Control and Processes</a> </li>
+<li><a href="media/redir_stdin/redir_stdin.htm">Redirecting stdin</a> </li>
+</ul>
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<ul>	
+	<li><b>Lab Week 8 - BASH and shell scripting:</b>We made a couple of
+	shell scripts in our ~/bin and then took Exercise 9 shell scripting for
+	a 10 point participation lab. </li>  
+	<li><b>Lab: ifthen_lab.sh </b>	<a href="lab_ifthen.txt" target="_blank" >If then Lab </a> Due before class next time.
+	
+</ul>
+
+
+
+	<object><hr /></object>
+	<span class="firstletter">F</span>or Next Week:<br/>
+	<blockquote>
+	<br />
+<a href="http://cobra.parkland.edu" target="_blank">Exercise 9</a> - Ch 10 Shell Scripting<br/>
+
+	<br />
+	<br />
+
+
+<br />
+<br />
+
+		</blockquote>
+
+	<!--********************************WEEK 9********************-->
+	<a name="week9"></a>
+	<h3>Week 9:
+	<span class="small">Oct. 17
+</span>
+	</h3>
+	<object><hr/></object>
+	<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+
+<br />
+	<b>Exam 2: On the first day of the Week</b> Ch6 vi, Ch 5 The Shell, Ch 8 bash<br />
+<br />
+<br />
+<b>Continue Shell Scripting and Project 1 </b>
+
+<ul>
+		<li><b>ALL WORK ON SHELL SCRIPTS IS TO BE DONE IN YOUR ~/bin </b></li>
+		<li>You can use my control structures from the example scripts
+		since I am an open sourcer, just credit me in your code and
+		build on it from there</li>
+	<li>Read Ch. 10 - Shell Programming and Control Structures</li>
+   	<li>Review: <a href="variables_and_arguments.html">Variables and Arguments</a></li>
+	<li><a href="control_structures.html">Control Structures</a></li>
+	<li><a href="scripts/">Example Scripts</a></li>
+	<li><a href="scripts/read.sh.txt">The <tt>read</tt> builtin</a> for getting
+		user input.</li>
+	<li>For File test etc. <tt> man test</tt>       </li> 
+	<li><a href="basic_shell_programming.html">Basic Shell Programming</a> </li>
+	<li><a href="user_interaction.html">User Interaction </a> </li>
+	<li><a href="functions.html">Functions </a> </li>
+	<li><tt>man bash</tt>  </li>
+	<li><tt>man test</tt>  </li>
+	<li><a href="scripts">Example Scripts</a> copy and use these to help you
+	with your control structures.  </li>
+</ul>
+
+
+
+	<object><hr /></object>
+
+	<br />
+<span class="firstletter">V</span>ideo:<br/> 
+	
+	
+<ul>
+	<li><a href="media/first_shell_script/first_shell_script.htm" target="_blank">
+	First Shell script</a></li> 
+	<li><a href="media/exit_status_positional_parameters/exit_status_positional_parameters.htm" target="_blank">
+	Exit status and positional Parameters</a></li> 
+	<li><a href="media/alias/alias.htm" target="_blank">alias, .alias and
+		the . (dot) command</a></li>
+	<li><a href="media/user_vars/user_vars.htm" target="_blank">User Created
+	Variables, read and export</a></li>
+<li><a href="media/script1/script1.htm" target="_blank">Script 1</a></li> 
+	<li><a href="media/functions/functions.htm" target="_blank">Shell Script
+	Functions</a></li> 
+	<li><a href="media/logical_operators/logical_operators.htm" target="_blank">
+	Logical Operators</a></li> 
+</ul>
+
+
+	<object><hr /></object>
+	<span class="firstletter">L</span>abs:<br/>
+<blockquote>
+	<ul>
+		<!--
+	<li><b>Lab 8: </b><a href="lab_first.txt" target="_blank" >First Shell Script
+	</a> </li> -->
+
+	</ul>
+</blockquote>
+	<object><hr /></object>
+	<span class="firstletter">F</span>or Next Week:<br/>
+		<blockquote>
+			
+	<br /><a href="project1.html" target="_blank" >
+		Project 1 </a> Due date posted in Cobra. 
+		<br /><a href="media/proj1/proj1.htm" target="_blank">Project 1 video</a><br />
+		<br />
+
+		<br/>
+
+
+</blockquote>
+
+
+
+
+<!--********************************WEEK 10*******************-->
+<a name="week10"></a>
+<h3>Week 10:
+<span class="small">Oct. 24
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+	<br />
+	<br />
+	<br />
+	<b>Project II and III assigned </b> 
+	<br />
+	<br />
+	<br />
+<object><hr/></object>
+	<b>More on Shell Scripting</b>
+	<ul>
+		<li><b>ALL WORK ON SHELL SCRIPTS IS TO BE DONE IN
+			YOUR ~/bin (which only teachers have access to)</b></li>
+		<li>test pp. 978-980   </li>
+		<li><tt> man test</tt> </li>
+		<li>Command Substution <tt>$(command)</tt>p. 340<br />Note that
+	     the `bactics` method of command substution is deprecated	</li>
+		<li>Read Ch. 10 - Shell Programming and Control Structures</li>
+		<li>Review: <a href="variables_and_arguments.html">Variables and 
+			Arguments</a></li>
+		<li><a href="control_structures.html">Control Structures</a></li>
+		<li><a href="scripts/">Example Scripts</a></li>
+		<li><a href="scripts/read.sh.txt">The <tt>read</tt> builtin</a> for getting
+			user input.</li>
+		<li>For File test etc. <tt> man test</tt> and test pp. 978-980      </li> 
+		<li><a href="basic_shell_programming.html">Basic Shell
+		Programming</a> </li> 
+		<li><a href="user_interaction.html">User Interaction </a> </li>
+		<li><a href="functions.html">Functions </a> </li>
+		<li><tt>man bash</tt>  </li>
+		<li><tt>man test</tt>  </li>
+		<li><a href="scripts">Example Scripts</a> copy and use these to help you
+		with your control structures.  </li>
+	</ul>
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+<br />
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<br />
+<blockquote>
+	<ul>
+	<li><a href="lab_function.txt" target="_blank" >Function Lab </a>
+	<br />Due before the first class Next Week.
+	</li>
+</ul>
+</blockquote>
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<br />
+<blockquote>
+
+	<br />
+	<br /><a href="project2.html" target="_blank" >Project 2 </a>Due 
+	Due date posted in Cobra.
+
+<br /><a href="media/proj2/proj2.htm" target="_blank">Project 2 video</a><br />
+<br />
+	
+<br /><a href="project3.html" target="_blank" >Project 3 </a>
+		<br />
+		Due date posted in cobra.
+		<br />	
+		<a href="media/proj3/proj3.htm" target="_blank">Project 3 video</a><br />
+	
+	
+</blockquote>
+		<br />
+
+
+
+<!--********************************WEEK 11*******************-->
+<a name="week11"></a>
+<h3>Week 11:
+<span class="small">Oct. 31
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<blockquote>
+	<b> Exam 3 - shell scripting is Week 12 day 1 for MW Class</b>
+	<br /><b> Exam 3 - shell scripting is Week 12 day 2 for TR Class</b>
+
+	<br />
+<br />
+	<b>In Class Demonstration</b> I will write the 
+	<a href="lab_function.txt" target="_blank" >Function Lab </a>
+<br />
+<br />
+	<b> Regular Expressions</b>
+	<ul>
+		<li>Appendix A Regular Expressions - p. 1011</li>
+		<li>We do not cover the Extended set of Regular Expressions</li>
+		<li><a href="regular_expressions.html">Regular Expressions</a>    </li>
+	<li><a href="http://en.wikipedia.org/wiki/Regular_expressions"
+	       	target="_blank">Regular Expressions at Wikipedia</a> </li>
+</ul>
+
+	<b> Stream Editing Using sed</b>
+	<ul>
+		<li>Ch 15 The sed editor    </li>
+		<li><a href="using_sed.html">Using sed</a>    </li>
+		<li>See Part V the command reference in the book for a good explanation
+		of how sed works</li>
+		<li><a href="sed/">Some of my sed data and scripts</a>    </li>
+		<li><a href="sed.txt">sed's process for going through a file</a>    </li>
+		<li><b>man wget</b> - you need to get my web page to edit by using this
+		command:<br /> 
+		<tt>wget www.csit.parkland.edu/~smauney/csc128/outline.shtml</tt>
+		<br />To get the cascading stylesheet for my web site it would
+		be:
+		<tt>wget www.csit.parkland.edu/~smauney/default.css</tt>
+		because you are editing the source of this file and I use server
+		side html to put the web page together from multiple files.
+		</li>
+	</ul> 
+	<br />
+
+
+
+
+
+
+<br />
+</blockquote>
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+
+<blockquote>
+	<ul>
+	<li><a href="media/sed/sed/sed.htm" target="_blank"> sed video 1</a></li> 
+	<li><a href="media/sed/sed2/sed2.htm" target="_blank"> sed video 2</a></li> 
+</ul>
+
+
+</blockquote>
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<blockquote>
+<br />
+<ul>
+	<li><a href="sed_lab.html" target="_blank"> sed Lab</a> - 15 points 
+	<br />		</b>See Due date in Cobra.  </li> 
+  </ul>
+
+</blockquote>
+
+
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<blockquote>
+
+
+		<br />
+		<br />
+		<a href="http://cobra.parkland.edu" target="_blank">Exercise 10</a> - 
+		Appendix A - Regular Expressions <br/>
+
+
+		<br /> <br />
+	<a href="http://cobra.parkland.edu" target="_blank">Exercise 11</a> - sed <br/>
+
+
+
+
+
+
+
+
+</blockquote>
+		<br />
+
+
+
+
+<!--********************************WEEK 12*******************-->
+<a name="week12"></a>
+<h3>Week 12:
+<span class="small">Nov. 7
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<blockquote>
+<br />
+	<b> Exam 3 - day 1</b> shell scripting
+
+
+	<br />
+	<br />
+	<br />
+<b> The awk pattern matching language</b>
+<ul>
+	<li>Ch 14 the awk pattern processing language    </li>
+	<li><a href="using_awk.html">Using awk</a>    </li>
+	<li><a href="awk/">Some of my awk data and scripts</a>    </li>
+	<li>Note that your awk and sed scripts are NOT executable since the
+	<br />executable is awk or sed itself when running the script.
+    	</li>
+</ul>
+<br />
+
+
+</blockquote>
+<br />
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<br />
+<blockquote>
+	<ul>
+<li><a href="awk_lab.txt"> awk Lab </a> 
+	<br/><b> Due by:</b>
+	See Schedule in Cobra. </li>
+	</ul>
+
+</blockquote>
+
+
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+		<blockquote>
+
+		<br />
+		<br />
+	<a href="http://cobra.parkland.edu" target="_blank">Exercise 12</a> - awk <br/>
+		<small>You may take this Exercise as many times as you wish before the due date in Cobra<br />
+		</small>
+		<br />
+
+
+
+		</blockquote>
+
+
+
+<!--********************************WEEK 13*******************-->
+<a name="week13"></a>
+<h3>Week 13:
+<span class="small">Nov. 14
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<br />
+<blockquote>
+
+
+
+
+
+
+<b>grep</b>
+<ul>
+	<li>Read pp.  833-837 - grep, </li>
+       	<li>man grep and man egrep</li>
+	<li><a href="http://www.linuxcommand.org/man_pages/grep1.html"
+	       	target="_blank">grep man page</a></li>
+	<li><a href="using_grep.html">Using grep</a></li>
+	<li><a href="scripts/for_grep.sh.txt" target="_blank">A shell script
+		for grepping </a> all files in a directory.  Check it out it
+       	is useful</li>
+	<li>We do not use the extended REGEX but if you do you should 
+	<tt>man egrep</tt></li>
+</ul>
+
+
+<b><tt>find</tt></b>
+<ul>
+	<li><a href="http://www.linuxcommand.org/man_pages/find1.html"
+	target="_blank">find man page</a> </li>
+	<li><a href="find_example.txt">find example</a> </li>
+	<li><a href="find_commands.txt">find in use</a> </li>
+	<li><a href="http://en.wikipedia.org/wiki/Find"
+		target="_blank">Wikipedia find</a> </li>
+	<li>find pp. 804-809 </li>
+</ul>
+
+
+<b>tar and diff</b>
+<ul> 
+	<li><tt>tar</tt> pp.  968-972 </li>
+	<li><a href="using_tar.html">tar, gzip, dump, restore, uniq, wc</a>
+       	</li>
+	<li><a href="http://www.linuxcommand.org/man_pages/tar1.html">tar
+	       	man page</a> </li>
+	<li> <a href="using_sed.html#diff">Using diff</a></li>
+	<li>man diff and diff p.  777-781</li>
+</ul>
+
+
+
+
+
+
+</blockquote>
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+
+
+
+
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<blockquote>
+<ul>  
+
+<li><a href="lab_tar.txt"> tar Lab </a> 
+	<br/><b> Due by:</b>
+	See Schedule in Cobra. </li>
+	<li> <a href="lab_find.txt">find lab</a>
+	<br/><b> Due by:</b>
+	See Schedule in Cobra. </li>
+</ul>
+
+
+
+
+
+
+
+	</ul>
+</blockquote>
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<blockquote>
+
+		<br />
+	<a href="http://cobra.parkland.edu" target="_blank">Exercise 13</a> - tar and find <br/>
+		<small>You may take this Exercise as many times as you wish before the due date in cobra<br />
+		</small>
+		<br />
+
+
+
+
+</blockquote>
+
+<!--********************************WEEK 14*******************-->
+<a name="week14"></a>
+<h3>Week 14:
+<span class="small">Nov. 21-22 <br />Thanksgiving Break Nov. 23-7
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<b>Chapter 17 Secure Shell Communications <tt>ssh sftp </tt>and<tt> ssh-keygen</tt></b>
+
+<br />
+<br />
+<ul>
+	<li><a href="communications.html#ftp" target="_blank">using sftp</a> </li>
+	<li><tt>sftp</tt> see the book command reference on ftp and note that 
+	most of the operation of ftp and sftp is the same
+	commands such as <tt>get put ls pwd</tt> work the same with sftp as ftp
+	which we no longer use since ftp transfers your password in clear text.</li>
+	<li><tt>man wget</tt></li>
+	<li><tt>man ssh-keygen</tt></li>
+	<li><tt>ssh-keygen -t rsa</tt> is the command you run to create your
+	Public/Private key pair.</li>
+	<li><a href="../csc250/ssh-keygen.html">ssh-keygen</a></li>
+	<li><tt>man ssh</tt> and Command reference in the book on ssh</li>
+	<li>If you are using a Windows machine and want to move a file to a *nix
+	server you should use a freeware program called WinSCP freely available
+	on the Internet</li>
+</ul>
+
+
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+<blockquote>
+<ul>
+	<li><a href="media/ssh1/ssh1.html" target="_blank"> ssh video 1</a></li> 
+	<li><a href="media/ssh-keygen/ssh-keygen.html" target="_blank"> ssh-keygen video </a></li> 
+</ul>
+
+
+
+
+
+</blockquote>
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<br />
+
+
+
+<ul> <li> <a href="ssh-keygen_lab.txt">ssh-keygen lab</a>
+	<br/><b> Due at the beginning of class the last  week.</b><br />
+	<br /> I will come and see you logging into www from shaula with no
+	password required. </li> 
+</ul>
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<blockquote>
+		<br />
+		<a href="http://cobra.parkland.edu" target="_blank">Exercise 14</a> - 
+		sftp, ssh and ssh-keygen <br/>
+		<small>You may take this Exercise as many times as you wish before the due date in cobra.<br />
+		</small>
+
+
+
+
+
+
+
+
+<br />
+
+</blockquote>
+
+
+
+<!--********************************WEEK 15*******************-->
+<a name="week15"></a>
+<h3>Week 15:
+<span class="small">Nov. 28
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br /><br/>
+
+Exam 3 Day 1 of the week. Shell scripting.
+<br/><br/>
+
+
+
+
+<b>Chapter 17 Secure Shell Communications <tt>ssh sftp </tt>and<tt> ssh-keygen</tt></b>
+
+<br />
+<br />
+<ul>
+	<li><a href="communications.html#ftp" target="_blank">using sftp</a> </li>
+	<li><tt>sftp</tt> see the book command reference on ftp and note that 
+	most of the operation of ftp and sftp is the same
+	commands such as <tt>get put ls pwd</tt> work the same with sftp as ftp
+	which we no longer use since ftp transfers your password in clear text.</li>
+	<li><tt>man wget</tt></li>
+	<li><tt>man ssh-keygen</tt></li>
+	<li><tt>ssh-keygen -t rsa</tt> is the command you run to create your
+	Public/Private key pair.</li>
+	<li><a href="../csc250/ssh-keygen.html">ssh-keygen</a></li>
+	<li><tt>man ssh</tt> and Command reference in the book on ssh</li>
+	<li>If you are using a Windows machine and want to move a file to a *nix
+	server you should use a freeware program called WinSCP freely available
+	on the Internet</li>
+</ul>
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+<blockquote>
+<ul>
+	<li><a href="media/ssh1/ssh1.html" target="_blank"> ssh video 1</a></li> 
+	<li><a href="media/ssh-keygen/ssh-keygen.html" target="_blank"> ssh-keygen video </a></li> 
+</ul>
+</blockquote>
+
+
+
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+
+<blockquote>
+<ul> <li> <a href="ssh-keygen_lab.txt">ssh-keygen lab</a>
+	<br/><b> Due at the beginning of class the last  week.</b><br />
+	<br /> I will come and see you logging into www from shaula with no
+	password required. </li> 
+</ul>
+</blockquote>
+
+
+
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<br />
+
+<blockquote>
+
+		<br />
+		<a href="http://cobra.parkland.edu" target="_blank">Exercise 14</a> - 
+		sftp, ssh and ssh-keygen <br/>
+		<small>You may take this Exercise as many times as you wish before the due date in cobra.<br />
+		</small>
+
+
+</blockquote>
+
+
+
+<!--********************************WEEK 16*******************-->
+<a name="week16"></a>
+<h3>Week 16:
+<span class="small">Dec. 5
+</span>
+</h3>
+<object><hr/></object>
+<span class="firstletter">L</span>inks, Reading, Class Overview:<br/> 
+<br />
+<br />
+	<b>groups</b>
+	<ul>
+		<li><a href="system_administration_1.html#groups" 
+			target="_blank">groups</a> and various group utilities.   </li>
+		<li><tt>id</tt> and/or <tt>groups</tt>  tells you what
+		       your current group is (Your GID) and what groups you
+		       belong to	   </li>
+	       <li><tt>groupadd</tt> the utility root uses to add a new group 
+	     to the system  </li>
+		<li><tt>chgrp</tt>  change the group ownership of a file </li>
+		<li><tt>newgrp [group]</tt>open a subshell with a new GID. Note
+		that you type <tt>exit</tt> to get back to your original login
+		group   </li>
+		<li>The file<tt>/etc/group</tt> contains the group information  </li>
+		<li><tt>man 5 group</tt> will show you the format of the
+		<tt>/etc/group</tt> file  </li>
+		<li>Groups can be password protected by root or the
+		administrator of a group<tt></tt>   </li>
+		<li>The Main Index p. 1128 has the pages of several groups references in the
+		book.<tt></tt>   </li>
+		<li><b>See chmod</b> p. 741 and especially p. 742 in the book shows relevant numerical arguments to
+		<tt>chmod</tt></li>
+	</ul>
+
+
+<ul>
+	<li><a href="media/groups1/groups1.html" target="_blank"> Basic Groups</a></li>
+<li><a href="media/group2/group2.html" target="_blank"> SetGID and Groups</a></li>
+</ul>
+
+<!--
+	<br />
+	<b>Basic Web Programming and HTML</b>
+	<ul>
+		<li><a href="html.html">Using html</a> </li>
+		<li><a href="http://www.w3schools.com/html/" target="_blank">
+		W3 html School</a> </li>
+		<li><a href="html.html">Using html</a> </li>
+		<li><a href="http://validator.w3.org">html validator</a> </li>
+		<li><a href="http://httpd.apache.org/docs/1.3/howto/ssi.html" 
+			target="_blank"> Server Side HTML</a> </li>
+		<li>You can always copy the file
+		/etc/skel/public_html/index.html to get a basic valid page to 
+		start with	</li>
+		<li>Our error log file is located on <b>www.csit.parkland.edu</b> at <br />
+		<tt>/var/log/httpd/vhosts/www/error_log</tt>  <br />tail that file
+		after you generate your error to see what your problems
+		are.</li>
+	</ul>
+
+<br />
+
+
+
+	<b>Scheduling jobs using crontab and at</b>
+	<ul>
+		<li><a href="using_crontab_at.html">crontab and at</a> </li>
+		<li>
+		<a href="http://en.wikipedia.org/wiki/cron" target="_blank">cron 
+			at Wikipedia</a> </li>
+		<li><a href="http://en.wikipedia.org/wiki/At_(Unix)" 
+			target="_blank">at at Wikipedia</a> </li>
+		<li><tt>man crontab</tt>   </li>
+		<li><tt>man at</tt>   </li>
+		<li><tt>atq </tt> and <tt>atrm</tt>   </li>
+		<li>at pp. 611-614   </li>
+		<li>crontab pp. 649-651   </li>
+		<li><tt>crontab -e</tt> is how you edit your crontab file. It is
+		opened in the vi editor and you place one instruction per line
+		and is then "installed" for you in
+		<tt>/var/spool/cron/[yourinstalledcrontab_file]</tt> note that
+		you cannot go there and see it directly</li>
+		<li>use <tt>mail</tt> to check that your cron and at jobs
+		ran</li>
+
+	</ul>
+
+
+
+	-->
+
+
+
+
+<!--
+<ul>
+	<li><a href="system_administration_1.html">System Administration
+		1</a></li>
+	<li><a href="system_administration_2.html">System Administration
+		2</a></li>
+	<li><tt>man 5 [file_name]</tt> Will show you section 5 of the man pages (File formats) which is the format of almost all
+	configuration files, for instance run <tt>man 5 passwd</tt> and it will
+	tell you about the file /etc/passwd and it's fields.</li>
+	<li>Man pages located in <tt>/usr/man/man[1-9]</tt>  you can look
+	through there</li>
+	<li><tt>/etc/fstab</tt> the filesystem table <tt>man fstab</tt></li>
+	<li><tt>/etc/mtab</tt> the mount table</li>
+	<li><tt>su - [username]  </tt>switch to [user] Note the dash
+	runs the users .bash_profile <tt>man su</tt>
+	<li><tt>/etc/inittab</tt> take a look at this file it sets the
+	"runlevels" and what runs at each runlevel.</li>
+
+</ul>
+-->
+
+
+
+<b>Class Review </b>
+<ul>
+	<li>Look at <tt>ispell</tt>, the *nix spell checker   </li>
+	<li>note that any system running X will have OpenOffice (or Koffice or
+	Goffice 
+	etc.) which is basic standard Office software</li>
+	<li> There is a huge community of free software available on the
+	Internet, from scripts to manage systems, video and graphics programs to graphical network monitoring 
+	tools and nearly anything else you can imagine.</li>
+	<li>GIMP the Graphics Image Manipulation Program is a free very good
+	replacement for Photoshop</li>
+
+</ul>
+
+
+
+
+
+<object><hr /></object>
+<span class="firstletter">V</span>ideo:<br/>
+<br />
+<!--
+	<b>Basic Linux Web Programming and HTML</b>
+	<ul>
+		<li><a href="media/basic_html/basic_html.html">basic 
+			HTML and Validating your code</a> </li>
+		<li><a href="media/server_sidehtml/server_sidehtml.htm">Using Server-Side HTML</a> </li>
+		<li><a href="media/web_err_logs/web_err_logs.html">Checking the logs</a> on 
+		www.csit.parkland.edu for errors to troubleshoot 
+		your web page.</li>
+	</ul>
+	-->
+<object><hr /></object>
+<span class="firstletter">L</span>abs:<br/>
+<br />
+	<ul>
+	<li> <a href="lab_groups.txt">groups lab</a>Due before class next time </li>
+	</ul>
+<br />
+<!--	
+	
+	
+		<li><a href="html_classlab.txt">html Lab</a> 
+		<br/>Due by: The time of the final exam</li>
+	</li>
+		<li><a href="crontab_at_lab.html">crontab and at lab</a> 
+		<br/>Due by: The time of the final exam</li>
+</ul>
+-->
+<object><hr /></object>
+<span class="firstletter">F</span>or Next Week:<br/>
+<blockquote>
+		<br />
+		<a href="http://cobra.parkland.edu" target="_blank">
+			Exercise 15</a> - 
+		groups <br/>
+		<small>You may take this Exercise as many times as you wish before the due date in Cobra<br />
+
+		</small>
+		<br />
+		<br />
+Finals Schedule: Finals Week <br />Dec. 12-16
+
+
+
+</blockquote>
+
+<object><hr /></object>
+<object>
+<p align="center">
+
+| <a href="#Top">Top</a> |  
+
+</p>
+</object>
+</div>
+</div>
+
+
+
+</body> 
+</html>
+																						

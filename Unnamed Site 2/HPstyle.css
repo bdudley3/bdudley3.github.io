@@ -1,0 +1,182 @@
+html {
+	animatio: mymove 3s infinite;
+	animatio: speed .864s infinite;
+}
+
+@keyframes mymove {
+	0% {background-color: red;}
+	33% {background-color: lightblue;}
+	66% {background-color: yellow;}
+	100% {background-color: red;}
+}
+@keyframes speed {
+	0% {background-color: red;}
+	21.6% {background-color: green;}
+	43.2% {background-color: blue;}
+	64.8% {background-color: yellow;}
+	86.4% {background-color: purple;}
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background: #6285d6;
+    max-width: 2000px;
+}
+
+
+
+
+
+
+#MyWebsiteLogo {
+	float: left;
+	margin: 0px;
+}
+#MyWebsiteLogo h1 {
+	margin-left: 12px;
+}
+
+
+/* #Searchbar {
+	float: right;
+	opacity: 0.6;
+	font-style: italic;
+	font-size: 15px;
+	background-color: grey;
+	height: auto;
+	margin: 20px 10px;
+	padding: 2px;
+} */
+
+
+
+
+
+/*--------------------------*/
+
+#links {
+	height: auto;
+	width: 200px;
+	position: fixed;
+	right: 20px;
+	background-color: black;
+	text-color: white;
+	padding: 5px 10px;
+	margin: 10px;
+	border: 8px solid #5B1CD0;
+	z-index: 2;
+}
+
+#links a {
+	color: peachpuff;
+}
+
+#MainLink {
+	position: fixed;
+	background-color: #EDDD86;
+	border: 6px solid #D55B12;
+	z-index: 3;
+}
+
+/* #navset1 {
+	position: relative;
+	display: inline-block;
+	height: auto;
+	width: auto;
+} */
+
+/*-------------------------*/
+
+
+
+#BMnav {
+	position: absolute;
+	align: center;
+}
+
+header {
+	background-image: url("http://csit.parkland.edu/~bdudley3/SI/SIimages/Headerpicbooks.jpg");
+	background-repeat: no-repeat;
+	width: 90%;
+	height: 200px;
+	box-shadow: #04142d;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#HeaderBack {
+	position: initial;
+	opacity: .9;
+	max-width: 720px;
+	width: 80%;
+	height: 66px;
+	background-color: darkgrey;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+footer {
+	position: relative;
+	text-align: center;
+	font-style: italic;
+	font-size: 12px;
+	border-style: solid black;
+	border-width: 5px;
+	margin-bottom: 30px;
+}
+
+
+
+#MainDiv {
+	min-width: 800px;
+	padding: 15px;
+	border: 3px solid black;
+	border-spacing: 10px;
+	background-color: #c5cedb;
+	animation: mymove 5s infinite repeat;
+	animation: speed 1s infinite repeat;
+	
+}
+
+section {
+	position: relative;
+	border-left: 5px solid black;
+	padding: 12px 22px 12px 22px;
+}
+
+#poster {
+	z-index: 5;
+	margin: 5px;
+	padding: 7px 10px 7px 10px;
+	background-color: white;
+}
+
+#posterimg {
+	max-height: 250px;
+	height: 100%;
+	margin: 5px;
+	padding: 0px 10px 7px 10px;
+	vertical-align: text-top;
+	float: left;
+}
+
+
+.input[type=text] {
+	width: 130px
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+
+}
+input[type=text]:focus {
+	width: 100%;
+}
+
+
