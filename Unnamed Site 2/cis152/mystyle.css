@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	border-style: solid;
+	border-width: 5px;
+	positon: relative;
+	animation: mymove 5s infinite;
+}
+	
+@keyframes mymove {
+	0% {background-color: #B0C1E7;}
+	50% {background-color: #E7B4B5;}
+	100% {background-color: #B0C1E7;}
+}
+
+header {
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+}

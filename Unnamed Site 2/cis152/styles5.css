@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container {
+	width: 922px;
+	margin: 0 auto;
+	border: 1px solid #E2F2EC;
+}
+
+#banner {
+	width: 902px;
+	height: 150px;
+	padding-right: 20px;
+	background: #FFF url("header.jpg") no-repeat;
+	color: #000;
+}
+
+nav {
+	width: auto;
+	padding: 0;
+	margin: 0;
+	background-color: #7BB022;
+	color: #000;
+}
+
+
+nav ul {
+	list-style-type: none;
+	height: 36px;
+	text-transform: uppercase;
+	font-size: .9em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 4px solid #366;
+	border-top: 1px solid #C0E2D4;
+}
+
+nav ul li {
+	display: inline;
+}
+
+nav ul li a {
+	float: left;
+	color: #880402;
+	padding: 12px 20px 0 20px;
+	height: 24px;
+	background: url(linkdivider.gif) #FFF no-repeat right top;
+}
+
+
+header {
+	width: 902px;
+	height: 15em;
+	padding: 10px 10px 20px 10px;
+	background-color: #B6DACB;
+	color: #000;
+}
+
+
+#content {
+	width: 100%;
+	background-image: url(4columns.gif);
+	padding-bottom: 1em;
+	overflow: auto;
+}
+
+#content p {
+	margin-bottom: .75em;
+}
+
+#content ul {
+	padding: 0 20px;
+}
+
+
+#col1, #col2, #col3, #col4 {
+	margin: 10px 12px;
+	padding: 0;
+	width: 205px;
+	float: left;
+}
+
+#col4 ul {
+	padding-left: 0;
+	margin-left: 0;
+	width: 200px;
+}
+
+#col4 li {
+	list-style-type: none;
+	margin: 0;
+	padding: .25em;
+	border-top: 1px solid #666;
+}
+
+
+footer {
+	width: 902px;
+	margin: 0;
+	padding: 10px;
+	border-top: 4px solid #366;
+	font-size: 90%;
+	background-color: #B5DACB;
+	color: #000;
+}
+
+
+.imgleft {
+	float: left;
+	padding: 10px;
+}
+
+.highlight {
+	background-color: #FFF;
+	color: #000;
+}
+
+
+nav .current, nav .current:hover {
+	color: #fff;
+	background: url(linkcurrent.gif) no-repeat;
+}
+
+
+a:link, a:visited {
+	color: #880402;
+}
+
+a:hover {
+	color: #00515C;
+}
+
+nav a:hover {
+	background: url(linkhover.gif) no-repeat;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Century Cothic", Arial, sans-serif;
+	font-size: 85%;
+	line-height: 1.5em;
+}
+
+h1 {
+	padding: 1em;
+	font-size: 200%;
+	letter-spacing: 2px;
+	font-weight: lighter;
+}
+
+h2 {
+	padding: 20px 35px 20px 10px;
+	font-size: 125%;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #366;
+	background: url(smallbug.png) no-repeat right center;
+	height: 2.5em
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
